@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Whack-A-Mole!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+
+<body>
+    
+    <h1>Whack-A-Mole</h1>
+    <h2>SCORE: <span id="score">0</span> </h2>
+    <h2>TIMER: <span id="countdown">30</span> </h2>
+    <h2>
+
+    
+    Select Level: <select name="Level" id="level">
+        <option value="easy">Easy</option>
+        <option value="medium" selected>Medium</option>
+        <option value="hard">Hard</option>
+        <option value="insane">Insane!</option>
+    </select>
+    </h2>
+    <button id="start">START</button>
+    <button id="stop" disabled>STOP</button>
+    
+    <div id="grid"></div>
+    <div class="cursor">
+        <img src="./assets/thor_hammer.png"/>
+    </div>
+
+</body>
+
+</html>

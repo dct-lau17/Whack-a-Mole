@@ -1,0 +1,37 @@
+#grid {
+    padding-top: 30px;
+    padding-left: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /*for 3 column design*/
+    grid-gap:5px;
+    max-width: 350px;
+    justify-items: center;
+}
+
+#grid.col4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 450px;
+   
+}
+
+
+.hole {
+    border: 1px solid black;
+    min-height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.mole {
+   background-image: url("./assets/mole2.png");
+}
+
+.cursor img {
+   z-index: 3;
+   position: absolute;
+   height: 100px;
+   transform: translate(-40px, -20px);
+   pointer-events: none;
+}
+
