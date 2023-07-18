@@ -22,8 +22,8 @@ const difficultyConfig = {
         width: 4
     },
     insane: {
-        maxSpeed: 800,
-        minSpeed: 1200,
+        maxSpeed: 600,
+        minSpeed: 1000,
         moles: 3,
         height: 4,
         width: 4
@@ -241,7 +241,7 @@ const levelHandler = () => {
     const gridSize = game.createGrid(game.height, game.width); // this should return an array
     // console.log('h', height)
     // console.log('w', width)
-   // console.log('gs',gridSize) // this is undefined?
+   console.log('gs',gridSize) // this is undefined?
     const html = game.displayGrid(gridSize);
   //  console.log('html', html)
     game.level = document.getElementById('level').value
@@ -275,10 +275,20 @@ document.addEventListener('DOMContentLoaded',() => {
     document.getElementById('level').addEventListener('change', levelHandler)
     document.getElementById('start').addEventListener('click', start)
 
+
+
     const cursor = document.querySelector(".cursor img")
     window.addEventListener("mousemove", (e) => {
         cursor.style.top = e.pageY + 'px';
         cursor.style.left = e.pageX + 'px';
+    })
+
+    window.addEventListener("mousedown", (e) => {
+        cursor.classList.add('whack')
+    })
+
+    window.addEventListener("mouseup", (e) => {
+        document.querySelector('.cursor img').classList.remove('whack')
     })
 }, false);
 
